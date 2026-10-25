@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Late Batch Bakery — Shop</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div style="width:100%;background:#fefae0;overflow:hidden">
+
+  <!-- HEADER -->
+  <header style="background:#fefae0">
+    <div style="max-width:1440px;margin:0 auto;box-sizing:border-box;padding:12px 40px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px">
+      <a href="index.html" style="display:block"><img src="assets/logos/late-batch-brown.svg" alt="Late Batch Bakery" style="display:block;width:96px;height:auto"></a>
+      <nav aria-label="Main" style="display:flex;flex-wrap:wrap;gap:4px">
+        <a class="nl" href="index.html">Home</a>
+        <a class="nl cur" href="shop.html" aria-current="page">Shop</a>
+        <a class="nl" href="about.html">About us</a>
+        <a class="nl" href="#bag"><span id="bag-label">Bag (0)</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section style="background:#edeae4">
+    <div style="max-width:1440px;margin:0 auto;box-sizing:border-box;padding:72px 40px;display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center">
+      <h1 style="font-family:'Pagkaki','Montserrat',sans-serif;font-size:clamp(56px,11vw,96px);line-height:.92;color:#3b2a22;text-transform:uppercase">Shop</h1>
+      <p style="max-width:560px;font-size:18px;line-height:28px;color:#513724">Fill your bag with bread, cookies and croissants. This is a simulated shop: nothing is charged and nothing is delivered.</p>
+      <nav aria-label="Categories" style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
+        <a class="cat c-bread" href="#bread">Bread</a>
+        <a class="cat c-cookies" href="#cookies">Cookies</a>
+        <a class="cat c-croi" href="#croissants">Croissants</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- PRODUCTS + BAG -->
+  <main style="max-width:1440px;margin:0 auto;box-sizing:border-box;padding:72px 40px 96px;display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start">
+
+    <div style="flex:999 1 600px;min-width:0;display:flex;flex-direction:column;gap:88px">
+
+      <section id="bread" aria-labelledby="h-bread" style="text-align:center">
+        <h2 id="h-bread" style="font-family:'Pagkaki','Montserrat',sans-serif;font-size:clamp(40px,8vw,64px);line-height:1;color:#c8553d;text-transform:uppercase">Bread</h2>
+        <div id="grid-bread" style="margin-top:32px;display:flex;flex-wrap:wrap;justify-content:center;gap:32px 24px"></div>
+      </section>
+
+      <section id="cookies" aria-labelledby="h-cookies" style="text-align:center">
+        <h2 id="h-cookies" style="font-family:'Pagkaki','Montserrat',sans-serif;font-size:clamp(40px,8vw,64px);line-height:1;color:#513724;text-transform:uppercase">Cookies</h2>
+        <div id="grid-cookies" style="margin-top:32px;display:flex;flex-wrap:wrap;justify-content:center;gap:32px 24px"></div>
+      </section>
+
+      <section id="croissants" aria-labelledby="h-croissants" style="text-align:center">
+        <h2 id="h-croissants" style="font-family:'Pagkaki','Montserrat',sans-serif;font-size:clamp(40px,8vw,64px);line-height:1;color:#588b8b;text-transform:uppercase">Croissants</h2>
+        <div id="grid-croissants" style="margin-top:32px;display:flex;flex-wrap:wrap;justify-content:center;gap:32px 24px"></div>
+      </section>
+
+    </div>
+
+    <aside id="bag" aria-label="Your bag" style="flex:1 1 340px;max-width:440px;min-width:0;box-sizing:border-box;align-self:flex-start;position:sticky;top:24px;background:#edeae4;padding:28px">
+      <h2 style="font-family:'Pagkaki','Montserrat',sans-serif;font-size:40px;line-height:40px;color:#3b2a22;text-transform:uppercase">Your bag</h2>
+
+      <div id="bag-content"></div>
+    </aside>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer style="background:#588b8b;color:#000">
+    <div style="max-width:1440px;margin:0 auto;box-sizing:border-box;padding:64px 40px;display:flex;flex-wrap:wrap;gap:40px 64px;align-items:flex-start;justify-content:space-between">
+      <img src="assets/logos/late-batch-cream.svg" alt="Late Batch Bakery" style="display:block;width:128px;height:auto">
+      <nav aria-label="Footer" style="display:flex;flex-direction:column;gap:4px">
+        <a class="fl" href="index.html">Home</a>
+        <a class="fl" href="shop.html">Shop</a>
+        <a class="fl" href="about.html">About us</a>
+      </nav>
+      <p style="flex:1 1 280px;max-width:440px;font-size:14px;line-height:20px">Late Batch Bakery is a fictional bakery. This website is a class project by Natalia Martín Macías, third-year student of TSDMG, for Digital Marketing Strategies.</p>
+    </div>
+  </footer>
+
+</div>
+
+<script src="js/shop.js"></script>
+</body>
+</html>

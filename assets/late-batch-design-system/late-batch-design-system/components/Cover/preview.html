@@ -1,0 +1,23 @@
+<!-- @dsCard height=320 -->
+<!doctype html><html><head><link rel="stylesheet" href="../../tokens.css"><meta charset="utf-8"><style>
+*{box-sizing:border-box}html,body{margin:0}body{width:960px;height:320px;position:relative;background:var(--bg);overflow:hidden;font-family:var(--font-sans)}
+svg{position:absolute;inset:0}
+.teal{fill:var(--dark-cyan)}.sage{fill:var(--ash-grey)}.copper{fill:var(--rosy-copper)}.ink{fill:var(--fg)}.chip{fill:var(--bg)}
+.logo{position:absolute;left:40px;top:40px;width:300px;height:auto}
+.logo.dk{display:none}[data-theme="dark"] .logo.lt{display:none}[data-theme="dark"] .logo.dk{display:block}
+.tag{position:absolute;left:40px;top:274px;margin:0;font:400 13px/16px var(--font-sans);color:var(--fg-secondary)}
+</style></head><body>
+<!-- derivation
+blocks: dark-cyan 200x200 + 120x160, ash-grey 200x120 + 120x160, rosy-copper 160x240, fg (dark-coffee / cornsilk) 160x80; all multiples of 40px (space-12 rhythm x 5/6/8)
+arrangement: flush modular grid, staggered columns bleeding off the top and right edges, right of x=480
+pattern: cookie chips (discs r=12 cut out in bg) - the cookie bags' chocolate chips; chosen because the packaging pairs cut-paper blocks with a hand-drawn chipped cookie
+steps/radii: 40px pitch, radius-none corners, no shadows -->
+<svg width="960" height="320" viewBox="0 0 960 320" aria-hidden="true">
+<rect class="teal" x="480" y="0" width="200" height="200"/><rect class="sage" x="480" y="200" width="200" height="120"/>
+<rect class="copper" x="680" y="0" width="160" height="240"/><rect class="ink" x="680" y="240" width="160" height="80"/>
+<rect class="teal" x="840" y="0" width="120" height="160"/><rect class="sage" x="840" y="160" width="120" height="160"/>
+<circle class="chip" cx="520" cy="40" r="12"/><circle class="chip" cx="600" cy="80" r="12"/><circle class="chip" cx="660" cy="40" r="12"/><circle class="chip" cx="540" cy="120" r="12"/><circle class="chip" cx="620" cy="160" r="12"/><circle class="chip" cx="660" cy="120" r="12"/><circle class="chip" cx="520" cy="240" r="12"/><circle class="chip" cx="600" cy="280" r="12"/><circle class="chip" cx="660" cy="240" r="12"/><circle class="chip" cx="880" cy="40" r="12"/><circle class="chip" cx="920" cy="100" r="12"/>
+</svg>
+<img class="logo lt" src="../../assets/Logos/late-batch-copper.svg" alt="Late Batch Bakery"><img class="logo dk" src="../../assets/Logos/late-batch-cream.svg" alt="Late Batch Bakery">
+<p class="tag">Bread, cookies and croissants in a paper bag.</p>
+</body></html>
