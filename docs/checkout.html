@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout — Late Batch Bakery</title>
+<meta name="description" content="Review your bag and place your order at Late Batch Bakery.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://nataliamartinm.github.io/Late_Batch/checkout.html">
+<meta name="theme-color" content="#3b2a22">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Late Batch Bakery">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Checkout — Late Batch Bakery">
+<meta property="og:description" content="Review your bag and place your order at Late Batch Bakery.">
+<meta property="og:url" content="https://nataliamartinm.github.io/Late_Batch/checkout.html">
+<meta property="og:image" content="https://nataliamartinm.github.io/Late_Batch/assets/og/late-batch-bakery.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Checkout — Late Batch Bakery">
+<meta name="twitter:description" content="Review your bag and place your order at Late Batch Bakery.">
+<meta name="twitter:image" content="https://nataliamartinm.github.io/Late_Batch/assets/og/late-batch-bakery.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap">
+<link rel="preload" href="assets/fonts/PAGKAKI-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-header__logo" href="index.html"><img src="assets/logos/late-batch-brown.svg" alt="Late Batch Bakery" width="96" height="70"></a>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a class="nl" href="index.html">Home</a>
+      <a class="nl" href="shop.html">Shop</a>
+      <a class="nl" href="about.html">About us</a>
+    </nav>
+    <div class="site-header__actions">
+      <button class="icon-button" type="button" data-bag-open aria-label="Open bag, 0 items">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 8h14l-1 13H6L5 8z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg>
+        <span class="bag-count" data-bag-count data-empty>0</span>
+      </button>
+      <button class="icon-button nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg class="nav-toggle__open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <svg class="nav-toggle__close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <p class="simulation-banner">Simulated checkout: no real payment is taken. Please do not enter real card details.</p>
+
+  <div class="container">
+    <div class="page-intro__inner" style="padding-bottom: 0">
+      <h1 class="display-xl">Checkout</h1>
+    </div>
+
+    <div class="checkout" id="checkout-empty" hidden>
+      <div class="stack">
+        <p class="lead">Your bag is empty. Add something from the shop before checking out.</p>
+        <a class="btn btn--lg" href="shop.html">Go to the shop</a>
+      </div>
+    </div>
+
+    <div class="checkout" id="checkout-layout">
+      <form class="checkout__form" id="checkout-form" novalidate>
+        <fieldset>
+          <legend class="display-md">Contact</legend>
+          <div class="field">
+            <label class="field__label" for="name">Full name</label>
+            <input class="input" id="name" name="name" type="text" autocomplete="name" aria-describedby="name-error" required>
+            <p class="field__error" id="name-error" aria-live="polite"></p>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label class="field__label" for="email">Email</label>
+              <input class="input" id="email" name="email" type="email" autocomplete="email" aria-describedby="email-error" required>
+              <p class="field__error" id="email-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label class="field__label" for="phone">Phone</label>
+              <input class="input" id="phone" name="phone" type="tel" autocomplete="tel" aria-describedby="phone-error" required>
+              <p class="field__error" id="phone-error" aria-live="polite"></p>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend class="display-md">Delivery</legend>
+          <label class="choice">
+            <input type="radio" name="method" value="pickup" checked>
+            <span class="choice__text"><span>Pick up in store</span><span>Free</span></span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="method" value="delivery">
+            <span class="choice__text"><span>Home delivery in Madrid, 7 pm to 9 pm</span><span>€2.50</span></span>
+          </label>
+          <p class="field__hint" id="pickup-info">Pick up at Calle del Horno 12, 28012 Madrid, from 5 pm today.</p>
+          <div id="address-fields" class="checkout__form" style="gap: var(--space-4)" hidden>
+            <div class="field">
+              <label class="field__label" for="address">Street and number</label>
+              <input class="input" id="address" name="address" type="text" autocomplete="street-address" aria-describedby="address-error" required>
+              <p class="field__error" id="address-error" aria-live="polite"></p>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label class="field__label" for="city">City</label>
+                <input class="input" id="city" name="city" type="text" autocomplete="address-level2" value="Madrid" aria-describedby="city-error" required>
+                <p class="field__error" id="city-error" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label class="field__label" for="postcode">Postcode</label>
+                <input class="input" id="postcode" name="postcode" type="text" inputmode="numeric" maxlength="5" autocomplete="postal-code" aria-describedby="postcode-error" required>
+                <p class="field__error" id="postcode-error" aria-live="polite"></p>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend class="display-md">Payment</legend>
+          <p class="field__hint">Test card: 4242 4242 4242 4242, any future date and any 3 digits.</p>
+          <div class="field">
+            <label class="field__label" for="card-name">Name on card</label>
+            <input class="input" id="card-name" name="card-name" type="text" autocomplete="off" aria-describedby="card-name-error" required>
+            <p class="field__error" id="card-name-error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="card-number">Card number</label>
+            <input class="input" id="card-number" name="card-number" type="text" inputmode="numeric" autocomplete="off" placeholder="1234 5678 9012 3456" aria-describedby="card-number-error" required>
+            <p class="field__error" id="card-number-error" aria-live="polite"></p>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label class="field__label" for="card-expiry">Expiry date</label>
+              <input class="input" id="card-expiry" name="card-expiry" type="text" inputmode="numeric" autocomplete="off" placeholder="MM/YY" maxlength="5" aria-describedby="card-expiry-error" required>
+              <p class="field__error" id="card-expiry-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label class="field__label" for="card-cvc">CVC</label>
+              <input class="input" id="card-cvc" name="card-cvc" type="text" inputmode="numeric" autocomplete="off" maxlength="4" aria-describedby="card-cvc-error" required>
+              <p class="field__error" id="card-cvc-error" aria-live="polite"></p>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="stack" style="gap: var(--space-3)">
+          <button class="btn btn--block btn--lg" id="place-order" type="submit">Place order</button>
+          <p class="fine-print">By placing this order you accept that this is a simulation. Nothing is charged and nothing is delivered.</p>
+        </div>
+      </form>
+
+      <aside class="summary" id="summary" aria-labelledby="summary-title">
+        <h2 class="display-md" id="summary-title">Your order</h2>
+        <ul class="summary__lines" data-summary-lines></ul>
+        <div class="summary__row" style="border-top: 1px solid var(--hairline)"><span>Subtotal</span><span data-subtotal></span></div>
+        <div class="summary__row"><span>Delivery</span><span data-delivery></span></div>
+        <div class="summary__total"><span class="label">Total</span><span class="display-md" data-total></span></div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <a href="index.html"><img class="site-footer__logo" src="assets/logos/late-batch-cream.svg" alt="Late Batch Bakery" width="128" height="93" loading="lazy"></a>
+    <div class="site-footer__col">
+      <p class="label">Explore</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a class="fl" href="index.html">Home</a>
+        <a class="fl" href="shop.html#bread">Bread</a>
+        <a class="fl" href="shop.html#cookies">Cookies</a>
+        <a class="fl" href="shop.html#croissants">Croissants</a>
+        <a class="fl" href="about.html">About us</a>
+      </nav>
+    </div>
+    <div class="site-footer__col">
+      <p class="label">Visit us</p>
+      <address>Late Batch Bakery<br>Calle del Horno 12<br>28012 Madrid, Spain</address>
+      <p>Tuesday to Sunday, 3 pm to 9 pm<br>Closed on Mondays</p>
+    </div>
+    <div class="site-footer__col">
+      <p class="label">Newsletter</p>
+      <p>Hear first when a new batch comes out of the oven.</p>
+      <form class="newsletter" data-newsletter novalidate>
+        <label class="visually-hidden" for="newsletter-email">Email address</label>
+        <div class="newsletter__row">
+          <input class="input" id="newsletter-email" type="email" name="email" placeholder="Your email" autocomplete="email" required>
+          <button class="btn" type="submit">Subscribe</button>
+        </div>
+        <p class="newsletter__msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+  <div class="container site-footer__bottom">
+    <p>© <span data-year>2026</span> Late Batch Bakery. A fictional bakery: this website is a class project by Natalia Martín Macías, third-year TSDMG student, for Digital Marketing Strategies.</p>
+    <button class="link-button" type="button" data-cookie-settings>Cookie settings</button>
+  </div>
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>

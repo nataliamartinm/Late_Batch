@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nataliamartinm.github.io/Late_Batch/sitemap.xml
